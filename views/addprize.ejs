@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้ากรอกรางวัล-lottery</title>
+</head>
+<body>
+    <% if (typeof mesg != "undefined") { %>
+        <h1><%= mesg %></h1>
+    <% } %>
+    <a href="/">Main</a>
+    <a href="/addprize">addprize</a>
+    <a href="/checkprize">checkprize</a>
+    <a href="/credit">credit</a>
+    <form action="/addprize" method="post">
+        <div>
+            <label>id</label>
+            <input type="text" name="id" id="id">
+        </div>
+        <div>
+            <label>Date</label>
+            <input type="text" name="Date" id="Date">
+        </div>
+        <div>
+            <label>Category</label>
+            <input type="text" name="Category" id="Category">
+        </div>
+        <div>
+            <label>Draw</label>
+            <input type="text" name="Draw" id="Draw">
+        </div>
+        <div>
+            <label>Prize</label>
+            <input type="text" name="Prize" id="Prize">
+        </div>
+        <div>
+            <label>Number</label>
+            <input type="text" name="Number" id="Number">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

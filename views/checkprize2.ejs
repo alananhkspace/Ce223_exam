@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/">Main</a>
+    <a href="/addprize">addprize</a>
+    <a href="/checkprize">checkprize</a>
+    <a href="/credit">credit</a>
+    <h1></h1>
+    <table>
+        <tr>
+            
+            <th>Category</th>
+            <th>Draw</th>
+            <th>Prize</th>
+            
+        </tr>
+        <% prizes.forEach(function(item) { %>
+        <tr>
+           
+            <td><%= item.Category %></td>
+            <td><%= item.Draw %></td>
+            <td><%= item.Prize %></td>
+           
+        </tr>
+        <% }) %>    
+    </table>
+</body>
+</html>

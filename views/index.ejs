@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าหลัก-lottery</title>
+</head>
+<body>
+    <a href="/">Main</a>
+    <a href="/addprize">addprize</a>
+    <a href="/checkprize">checkprize</a>
+    <a href="/credit">credit</a>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Draw</th>
+            <th>Prize</th>
+            <th>Number</th>
+        </tr>
+        <% prizes.forEach(function(item) { %>
+        <tr>
+            <td><%= item.id %></td>
+            <td><%= item.Date %></td>
+            <td><%= item.Category %></td>
+            <td><%= item.Draw %></td>
+            <td><%= item.Prize %></td>
+            <td><%= item.Number %></td>
+        </tr>
+        <% }) %>  
+        
+    </table>
+    <table>
+        <tr>
+        <th>id = วันที่+รางวัล+จำนวน</th>
+    </tr>
+    <tr>
+        <th>รางวัล: 1=First Prize ,2=First prize neighbor, 3=Three Digital Prefix</th>
+    </tr>  
+    </table>
+    
+</body>
+</html>

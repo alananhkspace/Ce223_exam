@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าตรวจรางวัล-lottery</title>
+</head>
+<body>
+    <a href="/">Main</a>
+    <a href="/addprize">addprize</a>
+    <a href="/checkprize">checkprize</a>
+    <a href="/credit">credit</a>
+    <% if (typeof check != "undefined") { %>
+        <h1><%= check %></h1>
+    <% } %>
+    <form action="/checkprize"method="get" >
+        <label>Draw</label>
+            <input type="Draw" name="Number" id="Draw">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+  <% if (check = 737867) { %>
+    <table>
+        <tr>
+            
+            <th>Category</th>
+            <th>Draw</th>
+            <th>Prize</th>
+           
+        </tr>
+        <% prizes.forEach(function(item) { %>
+        <tr>
+            
+            <td><%= item.Category %></td>
+            <td><%= item.Draw %></td>
+            <td><%= item.Prize %></td>
+
+        </tr>
+        <% } )%>
+    </table>
+   
+        <% } else { %>
+            <h1>No data</h1>
+        <%  }  %>    
+   <p>ทำไม่สำเร็จแต่สามารถ พิม/เลข (/Draw) ต่อจากlink เพื่อตรวจรางวัล </p>
+   <p>ตัวอย่าง: http://localhost:5000/checkprize/737866,737868</p>
+</body>
+</html>
